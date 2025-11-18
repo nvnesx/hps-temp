@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plano de Assistência Familiar HPS - Proposta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn { 
+      from { opacity: 0; transform: translateY(6px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    .animate-fadeIn { animation: fadeIn 600ms ease both; }
+    .blue-input { 
+      background: transparent; 
+      border: 1px solid rgba(255,255,255,0.95); 
+      color: #fff; 
+    }
+    .blue-input::placeholder { color: rgba(255,255,255,0.85); }
+    .focus-ring:focus { 
+      outline: none; 
+      box-shadow: 0 0 0 4px rgba(11,55,115,0.12); 
+      border-color: rgba(11,55,115,0.9); 
+    }
+    .whatsapp-fab { 
+      position: fixed; 
+      right: 18px; 
+      bottom: 18px; 
+      z-index: 60; 
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 font-sans">
+  
+  <header class="bg-gradient-to-r from-[#072d57] to-[#0b3b73] text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div>
+          <div class="text-sm text-white/90">Plano de Assistência Familiar HPS</div>
+          <h1 class="text-lg md:text-2xl font-extrabold">Proposta Familiar/Empresarial</h1>
+        </div>
+      </div>
+
+      <nav class="flex items-center gap-3">
+        <button
+          onclick="openWa('company')"
+          class="hidden md:inline-flex items-center gap-2 bg-white text-[#072d57] px-4 py-2 rounded-full font-semibold shadow hover:scale-[1.02] transition"
+        >
+          📄 Solicitar Proposta
+        </button>
+
+        <button
+          onclick="openWa('family')"
+          class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full font-semibold shadow transition"
+        >
+          💬 Falar com consultor
+        </button>
+      </nav>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 pb-12 pt-6">
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-lg flex flex-col md:flex-row items-center gap-14 animate-fadeIn">
+        <div class="md:w-1/2">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-[#072d57]">Plano de Assistência Familiar HPS — Proposta Familiar/Empresarial</h2>
+          <p class="mt-3 text-slate-600">Reduza custos com saúde corporativa, aumente a satisfação do time e garanta atendimento rápido e humanizado. Ativação em até 48 horas e benefícios exclusivos para empresas e famílias.</p>
+
+          <div class="mt-6 flex gap-3 flex-wrap">
+            <button onclick="openWa('company')" class="inline-flex items-center gap-2 bg-[#072d57] text-white px-5 py-3 rounded-full font-semibold shadow hover:opacity-95 transition">Quero levar o Plano HPS para minha empresa</button>
+            <button onclick="openWa('family')" class="inline-flex items-center gap-2 bg-[#072d57] text-white px-5 py-3 rounded-full font-semibold shadow hover:opacity-95 transition">Quero contratar o Plano para minha família</button>
+          </div>
+
+          <p class="mt-4 text-sm text-slate-500">Contato Comercial: <strong>(38) 99872-4896</strong> — Adson Carlos</p>
+        </div>
+
+        <div class="">
+          <div class="rounded-xl overflow-hidden from-sky-50 to-white">
+            <img src="https://i.ibb.co/7xgb3cj6/582413423-1593598508743290-2031601717159922776-n.jpg" alt="Logo HPS" class="w-full h-44 md:h-56 object-contain mx-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-10">
+    <section id="sobre" class="bg-white rounded-2xl p-6 shadow">
+      <h2 class="text-2xl font-bold text-[#072d57]">Sobre o Plano HPS</h2>
+      <p class="mt-3 text-slate-600 leading-relaxed">O Plano de Assistência Familiar HPS é uma solução prática e confiável, criada para proteger colaboradores e seus familiares. Unimos credibilidade (hospital próprio e rede qualificada), praticidade (adesão rápida, cartão de descontos) e foco na proteção familiar e empresarial — reduzindo custos e garantindo atendimento humanizado.</p>
+    </section>
+
+    <section id="beneficios" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition animate-fadeIn">
+        <h3 class="text-xl font-bold mb-3">🌟 Descontos</h3>
+        <ul class="space-y-2 text-slate-700">
+          <li>• Até <strong>70%</strong> de desconto em consultas (mais de 20 especialidades)</li>
+          <li>• Desconto em raio-x</li>
+          <li>• Desconto em exames laboratoriais</li>
+          <li>• Desconto em ultrassons</li>
+          <li>• Desconto na diária de internação clínica</li>
+          <li>• Desconto em exames de cardiologia</li>
+          <li>• Desconto em hemodinâmica</li>
+          <li>• Desconto em exames de pneumologia</li>
+          <li>• Desconto em colonoscopia e endoscopia</li>
+          <li>• Desconto em cateterismo e angioplastia</li>
+          <li>• Desconto em medicamentos</li>
+          <li>• Desconto em tratamento odontológico</li>
+          <li>• Desconto em academia</li>
+          <li>• Desconto em gás de cozinha</li>
+          <li>• Atendimento em clínicas parceiras (+100 especialidades)</li>
+          <li>• Consulta de urgência: <strong>R$ 70,00</strong></li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition animate-fadeIn">
+        <h3 class="text-xl font-bold mb-3">🎁 Cortesias & Suporte</h3>
+        <ul class="space-y-2 text-slate-700">
+          <li>• 10 Exames laboratoriais específicos gratuitos (uso ilimitado)</li>
+          <li>• Limpeza odontológica gratuita</li>
+          <li>• Atendimento médico no pronto-socorro 24 horas</li>
+          <li>• Pronto Socorro 24 horas - atendimento médico a qualquer momento</li>
+          <li>• Ativação rápida: até <strong>48 horas</strong></li>
+          <li>• Hospital próprio para mais segurança</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition animate-fadeIn">
+        <h3 class="text-xl font-bold mb-3">⚰️ Pós-vida</h3>
+        <p class="text-slate-700">Auxílio funeral incluso — assistência completa para a família em momentos delicados.</p>
+      </div>
+    </section>
+
+    <section id="adesao" class="bg-white rounded-2xl p-6 shadow">
+      <h2 class="text-2xl font-bold text-[#072d57]">Como funciona a adesão</h2>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 border rounded-lg">
+          <h4 class="font-semibold">Passo a passo</h4>
+          <ol class="list-decimal ml-5 mt-2 text-slate-700">
+            <li>Preenchimento simples do formulário</li>
+            <li>Confirmação e ativação em até 48 horas</li>
+            <li>Acesso ao Cartão HPS e rede parceira</li>
+          </ol>
+        </div>
+
+        <div class="p-4 border rounded-lg">
+          <h4 class="font-semibold">Taxas</h4>
+          <p class="mt-2 text-slate-700">Taxa única: <strong>R$ 100,00</strong> (no momento da assinatura)</p>
+        </div>
+
+        <div class="p-4 border rounded-lg">
+          <h4 class="font-semibold">Mensalidade</h4>
+          <p class="mt-2 text-slate-700">Mensalidade: <strong>R$ 69,90</strong> (a partir do mês seguinte)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposta" class="bg-gradient-to-r from-sky-50 to-white rounded-2xl p-6 border shadow">
+      <h2 class="text-2xl font-bold text-[#072d57]">Proposta Empresarial — Destaque</h2>
+      <p class="mt-2 text-slate-600">Soluções pensadas para empresas que buscam vantagem competitiva por meio de benefícios acessíveis e impacto real no bem-estar dos colaboradores.</p>
+
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ul class="space-y-2 text-slate-700">
+          <li>• Todos os benefícios do plano familiar inclusos</li>
+          <li>• Consulta de pronto-socorro gratuita para funcionários (horário comercial)</li>
+          <li>• Inclusão gratuita de parentes de 1º grau</li>
+          <li>• Programa de valorização do colaborador</li>
+        </ul>
+
+        <ul class="space-y-2 text-slate-700">
+          <li>• Redução de absenteísmo</li>
+          <li>• Aumento da satisfação no trabalho</li>
+          <li>• Relatórios de utilização para o RH (opcional)</li>
+          <li>• Excelente custo-benefício</li>
+        </ul>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3 items-center">
+        <div class="px-3 py-2 bg-white rounded-lg border text-sm">🏅 Rede Credenciada</div>
+        <div class="px-3 py-2 bg-white rounded-lg border text-sm">🔒 Hospital Próprio</div>
+        <div class="px-3 py-2 bg-white rounded-lg border text-sm">📊 Relatórios RH</div>
+      </div>
+
+      <div class="mt-6">
+        <h4 class="font-semibold">Depoimentos (exemplos)</h4>
+        <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+          <blockquote class="p-4 bg-white rounded-lg border text-slate-700">"Redução das faltas e melhor clima organizacional em 3 meses."</blockquote>
+          <blockquote class="p-4 bg-white rounded-lg border text-slate-700">"Ativação rápida e suporte eficiente para o RH."</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#072d57] text-white rounded-2xl p-6 text-center" aria-labelledby="cta-final">
+      <h2 id="cta-final" class="text-2xl font-bold">Quero levar o HPS para minha empresa!</h2>
+      <p class="mt-2">Solicite uma proposta personalizada — nossa equipe entrará em contato com opções conforme o tamanho da sua empresa.</p>
+
+      <form id="contato-form" class="mt-6 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3" onsubmit="handleFormSubmit(event)">
+        <input name="nome" required placeholder="Nome completo / Empresa" class="p-3 rounded-lg blue-input focus-ring" />
+        <input name="telefone" required placeholder="Telefone / WhatsApp" class="p-3 rounded-lg blue-input focus-ring" />
+        <input name="email" type="email" required placeholder="E-mail" class="p-3 rounded-lg md:col-span-2 blue-input focus-ring" />
+        <input name="cargo" placeholder="Cargo (opcional)" class="p-3 rounded-lg blue-input focus-ring" />
+        <textarea name="mensagem" rows="4" placeholder="Mensagem / Observações" class="p-3 rounded-lg md:col-span-2 blue-input focus-ring"></textarea>
+
+        <div class="md:col-span-2 flex gap-3">
+          <button type="button" onclick="openWa('company')" class="flex-1 bg-green-700 hover:bg-green-800 text-white px-4 py-3 rounded-lg font-semibold">Solicitar proposta</button>
+          <button type="button" onclick="openWa('family')" class="flex-1 border border-white/30 text-white px-4 py-3 rounded-lg">Fale com consultor</button>
+        </div>
+
+        <p class="md:col-span-2 text-sm text-white/90">Telefones: (38) 99872-4896 • Atendimento comercial: segunda a sexta, 08:00–18:00</p>
+      </form>
+    </section>
+
+    <footer class="text-sm text-slate-600 mt-6">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+        <div>
+          <strong class="text-[#072d57]">Contato</strong>
+          <p class="mt-1">(38) 99872-4896 — Adson Carlos</p>
+          <p>Rua Cônego Benício, nº 104, Centro</p>
+        </div>
+
+        <div>
+          <strong class="text-[#072d57]">Redes</strong>
+          <p class="mt-1">@planohps</p>
+          <p>@adson_planohps</p>
+        </div>
+
+        <div class="text-right md:text-left">
+          <p>© <span id="year"></span> Plano de Assistência Familiar HPS — Todos os direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <button aria-label="WhatsApp" onclick="openWa('company')" class="whatsapp-fab bg-green-600 hover:bg-green-700 p-4 rounded-full shadow-lg text-white">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M20.52 3.48A11.86 11.86 0 1 0 12.07 23l-1.5-1.04a1 1 0 0 0-1.06-.02l-2.2 1.3a.5.5 0 0 1-.75-.52l.4-2.4a1 1 0 0 0-.28-.88A11.86 11.86 0 0 0 20.52 3.48zM12 21.8A9.8 9.8 0 1 1 21.8 12 9.81 9.81 0 0 1 12 21.8z"/>
+    </svg>
+  </button>
+
+  <script>
+    // WhatsApp links
+    const waLinks = {
+      company: "https://wa.me/5538998724896?text=Ol%C3%A1!%20Tenho%20interesse%20em%20contratar%20o%20Plano%20de%20Assist%C3%AAncia%20Familiar%20HPS%20para%20a%20minha%20empresa",
+      family: "https://wa.me/5538998724896?text=Ol%C3%A1%2C%20Tenho%20interesse%20em%20contratar%20o%20Plano%20HPS%20para%20minha%20fam%C3%ADlia"
+    };
+
+    function openWa(type) {
+      const url = waLinks[type];
+      try {
+        if (window.top && window.top !== window) {
+          window.top.location.href = url;
+        } else {
+          window.location.href = url;
+        }
+      } catch (err) {
+        window.location.href = url;
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+
+      const nome = encodeURIComponent(form.nome.value || 'Não informado');
+      const tel = encodeURIComponent(form.telefone.value || 'Não informado');
+      const email = encodeURIComponent(form.email.value || 'Não informado');
+      const cargo = encodeURIComponent(form.cargo.value || 'Não informado');
+      const mensagem = encodeURIComponent(form.mensagem.value || '');
+
+      const msg = `Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20HPS.%20Nome:%20${nome}%20Telefone:%20${tel}%20Email:%20${email}%20Cargo:%20${cargo}%20Mensagem:%20${mensagem}`;
+      const url = `https://wa.me/5538998724896?text=${msg}`;
+      
+      try {
+        if (window.top && window.top !== window) {
+          window.top.location.href = url;
+        } else {
+          window.location.href = url;
+        }
+      } catch (err) {
+        window.location.href = url;
+      }
+    }
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
